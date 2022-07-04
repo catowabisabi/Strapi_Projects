@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "post"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 10,
+      "maxLength": 50
+    },
+    "content": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 2000,
+      "minLength": 10
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "post_id": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    }
+  }
+}
